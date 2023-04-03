@@ -1,17 +1,16 @@
 .App {
-  min-height: 100vh;
-  text-align: center;
-  
-}
-
-
-
-.App-header {
   background-image: url('./background2.jpg');
   background-position: bottom;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+  
+}
+
+.App-header {
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,4 +19,23 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
+.nav {
+  background-color: rgb(23, 51, 67);
+  opacity: .8;
+}
+
+#navText {
+  color:rgb(151, 162, 168);
+}
+
+#basic-nav-dropdown {
+  color:rgb(151, 162, 168);
+}
+
+#footer {
+  background-color: rgba(23, 51, 67);
+}
+
 

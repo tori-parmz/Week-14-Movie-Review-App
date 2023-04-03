@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Movie from './components/Movie'
 import ReviewForm from './components/ReviewForm';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Movie />
         <ReviewForm />
       </header>
+      <Footer />
     </div>
   );
 }

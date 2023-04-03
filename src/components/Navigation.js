@@ -5,23 +5,23 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navigation() {
   return (
-    <Navbar bg="light" expand="lg" sticky="top">
+    <Navbar className='nav' expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand id='navText' href="#home">CritHub</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <Nav.Link id='navText' href="#home">Home</Nav.Link>
+            <Nav.Link id='navText' href="#link">Movies A-Z</Nav.Link>
+            <NavDropdown title="Account" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Proflie
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Write a Review</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Signup
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
