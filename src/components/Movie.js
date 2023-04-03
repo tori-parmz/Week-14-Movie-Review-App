@@ -3,10 +3,22 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 export default class Movie extends React.Component{
+//constructor for movie data
+  constructor(props){
+    super(props);
+    this.state = {
+        id: props.id,
+        title: props.title,
+        image: props.image,
+        synopsis: props.synopsis,
+        rating: props.rating
+    };
+  }
+
     render(){
         return(
-            <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+            <Card className='movieCard' style={{ width: '18rem' }}>
+      <Card.Img className="moviePoster" variant="top" src={this.state.image} height="200px" />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>
