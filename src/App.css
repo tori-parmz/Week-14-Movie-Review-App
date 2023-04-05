@@ -11,13 +11,15 @@
 
 .App-header {
   
+  margin-top: 4%;
+  margin-bottom: 4%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content:start;
   font-size: calc(10px + 2vmin);
   color: white;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -44,6 +46,10 @@
 
 }
 
+#smallText{
+  display:flex;
+  justify-content:space-between;
+}
 .movieText{
   color: #2b2c2c;
   font-size: 14px !important;
@@ -54,3 +60,12 @@
   background-color: #ffffffaf !important;
 }
 
+.movieList {
+  display:flex;
+  justify-content: space-around;
+}
+
+#cardSpacing {
+  display:flex;
+  justify-content: space-around;
+}

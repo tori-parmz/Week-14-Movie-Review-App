@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import MovieList from './MovieList';
 import ReviewForm from './ReviewForm';
 import ReviewList from './ReviewList';
 
@@ -33,9 +32,23 @@ export default class Movie extends React.Component{
         Dir. {this.state.director}
 
         </Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted">
-        {this.state.releaseDate}
+        <Card.Subtitle className="mb-2 text-muted" id="smallText">
+          <div>
+          {this.state.releaseDate}
+
+          </div>
+
+          <div>
           {this.state.runTime}
+
+          </div>
+
+          <div>
+            Rated: 
+          {this.state.ageRating}
+          </div>
+
+          
 
         </Card.Subtitle>
         <Card.Title className="movieText">
@@ -43,7 +56,15 @@ export default class Movie extends React.Component{
           {this.state.description}
 
         </Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{this.state.genre}{this.state.ageRating}
+        <Card.Subtitle className="mb-2 text-muted" id="smallText">
+          <div>
+            
+          {this.state.genre.map(genre => {
+            return <div {...genre}></div>
+        })}
+
+          </div>
+          
         </Card.Subtitle>
         <ReviewForm />
         <ReviewList />

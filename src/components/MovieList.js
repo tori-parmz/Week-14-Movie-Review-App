@@ -4,6 +4,15 @@
 //map doesn't mutate, splice mutates the array, filter doesn't mutate
 import React from 'react';
 import Movie from './Movie';
+import {
+    MDBCard,
+    MDBCardImage,
+    MDBCardBody,
+    MDBCardTitle,
+    MDBCardText,
+    MDBRow,
+    MDBCol
+  } from 'mdb-react-ui-kit';
 
 function MovieList() {
 
@@ -17,7 +26,7 @@ function MovieList() {
             director: "Jordan Peele",
             runTime: "2h 10m",
             ageRating: "R",
-            image: "https://pbs.twimg.com/media/E66V_D2VoAExDxW?format=jpg&name=large",
+            image: "https://www.themoviedb.org/t/p/original/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
         },
         {
             id: 2,
@@ -100,7 +109,7 @@ function MovieList() {
             id: 9,
             title: "Alien",
             releaseDate: "1979",
-            description: "" ,
+            description: "The crew of a commercial spacecraft encounter a deadly lifeform after investigating an unknown transmission." ,
             genre: ["Horror", "Sci-Fi"],
             director: "Ridley Scott",
             runTime: "1h 57m",
@@ -166,7 +175,7 @@ function MovieList() {
             id: 15,
             title: "Booksmart",
             releaseDate: "2019",
-            description: "" ,
+            description: "On the eve of their high-school graduation, two academic superstars and best friends realize they should have worked less and played more. Determined not to fall short of their peers, the girls try to cram four years of fun into one night." ,
             genre: ["Comedy"],
             director: "Olivia Wilde",
             runTime: "1h 42m",
@@ -186,6 +195,39 @@ function MovieList() {
         },
         {
             id: 17,
+            title: "Portrait of a Lady on Fire",
+            releaseDate: "2019",
+            description: "On an isolated island in Brittany at the end of the eighteenth century, a female painter is obliged to paint a wedding portrait of a young woman.",
+            genre: ["Drama", "Romance"],
+            director: "Céline Sciamma",
+            runTime: "2h",
+            ageRating: "R",
+            image: "https://www.themoviedb.org/t/p/original/2LquGwEhbg3soxSCs9VNyh5VJd9.jpg",
+        },
+        {
+            id: 18,
+            title: "The Florida Project",
+            releaseDate: "2017",
+            description: "The story of a precocious six year-old and her ragtag group of friends whose summer break is filled with childhood wonder, possibility and a sense of adventure while the adults around them struggle with hard times." ,
+            genre: ["Drama"],
+            director: "Sean Baker",
+            runTime: "1h 51m",
+            ageRating: "R",
+            image: "https://www.themoviedb.org/t/p/original/bnSTP1PY2fDyat0eUa4QouuGV7F.jpg",
+        },
+        {
+            id: 19,
+            title: "Judas and the Black Messiah",
+            releaseDate: "2021",
+            description: "Bill O'Neal infiltrates the Black Panthers on the orders of FBI Agent Mitchell and J. Edgar Hoover. As Black Panther Chairman Fred Hampton ascends—falling for a fellow revolutionary en route—a battle wages for O’Neal’s soul." ,
+            genre: ["Drama", "History"],
+            director: "Shaka King",
+            runTime: "2h 6m",
+            ageRating: "R",
+            image: "https://www.themoviedb.org/t/p/original/g5NEy7KN8I0YKXw1MCZVdHE47Cx.jpg",
+        },
+        {
+            id: 20,
             title: "The Skeleton Twins",
             releaseDate: "2014",
             description: "Having both coincidentally cheated death on the same day, estranged twins reunite with the possibility of mending their relationship." ,
@@ -199,18 +241,16 @@ function MovieList() {
         
     ];
 
-    const displayMovies = movies.map((index => {
-        return <Movie
-        id={index.id}
-        title={index.title}
-        releaseDate={index.releaseDate}
-        description={index.description}
-        genre={index.genre}
-        director={index.director}
-        runTime={index.runTime}
-        ageRating={index.ageRating}
-        image={index.image} />
-    }))
+    return (
+        <>
+        <MDBRow className='row-cols-1 row-cols-md-3 g-4' id="cardSpacing">
+        {movies.map(movie => {
+            return <Movie {...movie} />
+        })}
+        </MDBRow>
+        
+        </>
+    )
 
 }
 

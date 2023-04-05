@@ -14,7 +14,7 @@ export default function Stars() {
      
       
      
-      <Typography component="legend" className="movieText">No rating given</Typography>
+      <Typography component="legend" className="movieText">Rate this movie:</Typography>
       <Rating name="no-value" value={null} />
     </Box>
   );

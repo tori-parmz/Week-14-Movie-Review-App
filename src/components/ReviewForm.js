@@ -17,7 +17,7 @@ export function ReviewForm () {
         <div>
         <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Stars />
+                <Stars onChange={console.log("Stars clicked")} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label className="movieText">Name:</Form.Label>
