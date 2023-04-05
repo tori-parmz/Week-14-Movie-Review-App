@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ReviewForm from './ReviewForm';
 import ReviewList from './ReviewList';
+import { Badge } from 'react-bootstrap';
 
 export default class Movie extends React.Component{
 //constructor for movie data
@@ -44,7 +45,7 @@ export default class Movie extends React.Component{
           </div>
 
           <div>
-            Rated: 
+            {'Rated: '}
           {this.state.ageRating}
           </div>
 
@@ -57,10 +58,13 @@ export default class Movie extends React.Component{
 
         </Card.Title>
         <Card.Subtitle className="mb-2 text-muted" id="smallText">
-          <div>
+          <div id='genreBadges'>
             
           {this.state.genre.map(genre => {
-            return <div {...genre}></div>
+            return <div>
+              <Badge bg="secondary">{genre}</Badge>{' '}
+              </div>
+            
         })}
 
           </div>

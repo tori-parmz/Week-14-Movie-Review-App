@@ -69,3 +69,8 @@
   display:flex;
   justify-content: space-around;
 }
+
+#genreBadges {
+  display: flex;
+  justify-content:space-between;
+}
