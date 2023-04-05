@@ -1,10 +1,13 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
+import React, { useEffect } from 'react';
 
-export default class ReviewList extends React.Component{
-    render(){
-        return(
-            <div>ReviewList</div>
-        )
-    }
+function ReviewList({reviews}) {
+    useEffect(() => {
+        console.log(`reviews: `, reviews);
+    }, [reviews])
+    
+    return (
+        <div>{reviews}</div>
+    )
 }
+
+export default ReviewList;

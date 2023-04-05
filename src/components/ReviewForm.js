@@ -1,29 +1,48 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
 import ReviewList from './ReviewList';
 import Form from 'react-bootstrap/Form';
 import Stars from './Stars';
 
-export default class ReviewForm extends React.Component{
-    render(){
-        return(
-            <div>
-                <Form>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Stars />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Write your review:</Form.Label>
-        <Form.Control as="textarea" rows={3} />
-      </Form.Group>
-                </Form>
-                
-            <Button>Publish</Button>
-            <ReviewList></ReviewList>
-            </div>
-        )
+export function ReviewForm () {
+    const [newReview, setNewReview] = useState("");
+    const [reviews, setReviews] = useState([]);
+
+    const submitForm = () => {
+       setReviews(reviews => [...reviews, newReview]);
+       setNewReview("");
     }
+//newReview
+    return (
+        <div>
+        <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Stars />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Label>Write your review:</Form.Label>
+                <Form.Control
+                as="textarea"
+                rows={3}
+                value={newReview}
+                onChange={(e) => setNewReview(e.target.value)}
+                />
+            <Button
+            onClick={() => submitForm()}
+            >
+                Publish</Button>
+            </Form.Group>
+        </Form>       
+        
+        <ReviewList reviews={reviews}></ReviewList>
+            </div>
+
+    )
+
 }
+
+export default ReviewForm;
+    
 
 /*
 
