@@ -20,7 +20,9 @@ export function ReviewForm () {
                 <Stars />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Write your review:</Form.Label>
+                <Form.Label className="movieText">Name:</Form.Label>
+                <Form.Control type="text" placeholder="Name" />
+                <Form.Label className="movieText">Write your review:</Form.Label>
                 <Form.Control
                 as="textarea"
                 rows={3}
@@ -33,7 +35,7 @@ export function ReviewForm () {
                 Publish</Button>
             </Form.Group>
         </Form>       
-        
+        <br></br>
         <ReviewList reviews={reviews}></ReviewList>
             </div>
 

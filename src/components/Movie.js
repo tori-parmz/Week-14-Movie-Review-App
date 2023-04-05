@@ -34,7 +34,7 @@ export default class Movie extends React.Component{
 
         </Card.Subtitle>
         <Card.Subtitle className="mb-2 text-muted">
-        {this.state.releaseDate} { } 
+        {this.state.releaseDate}
           {this.state.runTime}
 
         </Card.Subtitle>
