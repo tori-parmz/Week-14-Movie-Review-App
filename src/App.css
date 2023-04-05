@@ -22,7 +22,7 @@
 
 
 .nav {
-  background-color: rgb(23, 51, 67);
+  background-color: #173545;
   opacity: .8;
 }
 
@@ -35,7 +35,22 @@
 }
 
 #footer {
-  background-color: rgba(23, 51, 67);
+  background-color: #173343;
 }
 
+.movieTitle{
+  color: #173343;
+  line-height: normal
+
+}
+
+.movieText{
+  color: #2b2c2c;
+  font-size: 14px !important;
+
+}
+
+.movieCard{
+  background-color: #ffffffaf !important;
+}
 

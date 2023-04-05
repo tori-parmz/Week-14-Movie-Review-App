@@ -11,6 +11,7 @@ export default class Footer extends React.Component{
               <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Movies A-Z</a></li>
               <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">Account</a></li>
               <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">About</a></li>
+              <li className="nav-item"><a href="https://www.flaticon.com/free-icons/cinema" className="nav-link px-2 text-muted">Cinema icon created by Good Ware - Flaticon</a></li>
             </ul>
             <p class="text-center text-muted">© 2023 CritHub, Inc</p>
           </footer>
