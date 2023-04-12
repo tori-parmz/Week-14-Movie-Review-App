@@ -60,8 +60,8 @@ export default class Movie extends React.Component{
         <Card.Subtitle className="mb-2 text-muted" id="smallText">
           <div id='genreBadges'>
             
-          {this.state.genre.map(genre => {
-            return <div>
+          {this.state.genre.map((genre, index) => {
+            return <div key={index}>
               <Badge bg="secondary">{genre}</Badge>{' '}
               </div>
             
@@ -71,7 +71,6 @@ export default class Movie extends React.Component{
           
         </Card.Subtitle>
         <ReviewForm />
-        <ReviewList />
       </Card.Body>
     </Card>
 

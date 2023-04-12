@@ -3,25 +3,43 @@ import Button from 'react-bootstrap/Button';
 import ReviewList from './ReviewList';
 import Form from 'react-bootstrap/Form';
 import Stars from './Stars';
+import Rating from '@mui/material/Rating';
 
 export function ReviewForm () {
     const [newReview, setNewReview] = useState("");
+    const [newName, setNewName] = useState("");
     const [reviews, setReviews] = useState([]);
+    const [value, setValue] = useState(null);
+    
 
     const submitForm = () => {
-       setReviews(reviews => [...reviews, newReview]);
-       setNewReview("");
+        var newReviewObj = {
+            userName: newName,
+            userReview: newReview,
+            stars: value,//useEffect hook, create a function to pass down from the child stars
+            //parent will create the function and pass it down to the child
+            //child will update the parent's state
+        };
+
+        setReviews([...reviews, newReviewObj]);
+        setNewReview("");
+        setValue(0);
+        setNewName("");
     }
 //newReview
     return (
+
+        //have somewhere in state to save the stars, 
         <div>
         <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Stars onChange={console.log("Stars clicked")} />
+                <Stars />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label className="movieText">Name:</Form.Label>
-                <Form.Control type="text" placeholder="Name" />
+                <Form.Control type="text" placeholder="Name"
+                onChange={(e) => setNewName(e.target.value)}
+                />
                 <Form.Label className="movieText">Write your review:</Form.Label>
                 <Form.Control
                 as="textarea"
@@ -36,7 +54,7 @@ export function ReviewForm () {
             </Form.Group>
         </Form>       
         <br></br>
-        <ReviewList reviews={reviews}></ReviewList>
+        <ReviewList />
             </div>
 
     )
@@ -44,15 +62,3 @@ export function ReviewForm () {
 }
 
 export default ReviewForm;
-    
-
-/*
-
-Write a review and then submit
-    
-    text input
-    Save it so you can see the previous reviews
-
-    add to a list of reviews (separate component)
-
-*/

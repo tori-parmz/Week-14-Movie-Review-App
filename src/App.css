@@ -74,3 +74,8 @@
   display: flex;
   justify-content:space-between;
 }
+
+.reviewList {
+  height: 25%;
+  overflow-y: scroll;
+}

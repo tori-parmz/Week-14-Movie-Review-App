@@ -4,6 +4,8 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 
 export default function Stars() {
+  const [value, setValue] = React.useState(null);
+  //handleClick = () => {setValue(value)}
 
   return (
     <Box
@@ -12,10 +14,16 @@ export default function Stars() {
       }}
     >
      
-      
-     
       <Typography component="legend" className="movieText">Rate this movie:</Typography>
-      <Rating name="no-value" value={null} />
+      <Rating 
+      name="simple-controlled"
+      value={value}
+      onChange={(_event, newValue) => {
+        setValue(newValue);}
+        }
+      />
     </Box>
+
+    //update state from parent here
   );
 }

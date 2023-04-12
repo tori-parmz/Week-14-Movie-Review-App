@@ -244,8 +244,8 @@ function MovieList() {
     return (
         <>
         <MDBRow className='row-cols-1 row-cols-md-3 g-4' id="cardSpacing">
-        {movies.map(movie => {
-            return <Movie {...movie} />
+        {movies.map((movie, index) => {
+            return <Movie key={index} {...movie} />
         })}
         </MDBRow>
         
