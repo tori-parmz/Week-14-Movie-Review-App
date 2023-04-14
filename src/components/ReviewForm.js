@@ -23,8 +23,12 @@ export function ReviewForm () {
 
         setReviews([...reviews, newReviewObj]);
         setNewReview("");
-        setValue(0);
         setNewName("");
+        
+    }
+
+    function handleRating(newValue) {
+        setValue(newValue);
     }
 //newReview
     return (
@@ -33,12 +37,15 @@ export function ReviewForm () {
         <div>
         <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Stars />
+                <Stars 
+                rating={handleRating}
+                />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label className="movieText">Name:</Form.Label>
                 <Form.Control type="text" placeholder="Name"
                 onChange={(e) => setNewName(e.target.value)}
+        
                 />
                 <Form.Label className="movieText">Write your review:</Form.Label>
                 <Form.Control

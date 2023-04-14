@@ -2,8 +2,10 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+//stars can be used for both the rating and read-only for the review
 
-export default function Stars() {
+export default function Stars({rating}) {
+  
   const [value, setValue] = React.useState(null);
   //handleClick = () => {setValue(value)}
 
@@ -19,7 +21,10 @@ export default function Stars() {
       name="simple-controlled"
       value={value}
       onChange={(_event, newValue) => {
-        setValue(newValue);}
+        rating(newValue);
+        setValue(newValue);
+
+      }
         }
       />
     </Box>

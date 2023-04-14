@@ -7,25 +7,23 @@ function ReviewList({reviews}) {
 
     useEffect(() => {
     }, [reviews])
-    
+    //maybe accordions too
     return (
-       
-        <>
-         {/* <div className='reviewList'>
-         {reviews.map((review) => {
-            return <Card>
-                <Card.Body>
-                    <Card.Text {...review}>
-                    
-                    </Card.Text>
 
-                </Card.Body>
+         <></>
+        //  {reviews.map((review) => (
+        //     <div>
+        //         {...reviews}
+        //     </div>
 
-            </Card>})}
+
+
+        //  ))}
             
-        </div> */}
-        </>
+            
+        
     )
+    
 }
 
 export default ReviewList;
