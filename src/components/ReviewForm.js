@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
-import ReviewList from './ReviewList';
 import Form from 'react-bootstrap/Form';
+import Reviews from './Reviews';
 import Stars from './Stars';
-import Rating from '@mui/material/Rating';
 
 export function ReviewForm () {
     const [newReview, setNewReview] = useState("");
@@ -24,12 +23,14 @@ export function ReviewForm () {
         setReviews([...reviews, newReviewObj]);
         setNewReview("");
         setNewName("");
+        setValue(null);
         
     }
 
     function handleRating(newValue) {
         setValue(newValue);
     }
+
 //newReview
     return (
 
@@ -54,14 +55,17 @@ export function ReviewForm () {
                 value={newReview}
                 onChange={(e) => setNewReview(e.target.value)}
                 />
-            <Button
+            <Button variant="primary" type="reset"
             onClick={() => submitForm()}
             >
                 Publish</Button>
             </Form.Group>
         </Form>       
         <br></br>
-        <ReviewList />
+        <div id="renderedReviews">
+            <Reviews />
+
+        </div>
             </div>
 
     )

@@ -79,3 +79,9 @@
   height: 25%;
   overflow-y: scroll;
 }
+
+#renderedReviews {
+  overflow:scroll;
+  height:200px;
+  text-align: left;
+}

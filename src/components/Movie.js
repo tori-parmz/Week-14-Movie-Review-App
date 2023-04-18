@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ReviewForm from './ReviewForm';
-import ReviewList from './ReviewList';
+import ReviewList from './Reviews';
 import { Badge } from 'react-bootstrap';
 
 export default class Movie extends React.Component{
