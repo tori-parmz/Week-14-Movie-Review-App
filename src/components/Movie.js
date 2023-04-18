@@ -3,6 +3,9 @@ import Card from 'react-bootstrap/Card';
 import ReviewForm from './ReviewForm';
 import { Badge } from 'react-bootstrap';
 
+//Movie component styles the card for the movies in the MovieList array data. takes
+//props from the parent MovieList
+
 export default class Movie extends React.Component{
 //constructor for movie data
    constructor(props){

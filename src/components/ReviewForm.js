@@ -4,6 +4,12 @@ import Form from 'react-bootstrap/Form';
 import Reviews from './Reviews';
 import Stars from './Stars';
 
+
+//ReviewForm has two child components: Stars and Review. submitForm() will push the new data
+//into props of objects in array "reviews"
+//This passes props to the child components
+//at the below the form is a div where mapped reviews are rendered using child component Reviews
+
 export function ReviewForm () {
     const [newReview, setNewReview] = useState("");
     const [newName, setNewName] = useState("");
@@ -25,6 +31,8 @@ export function ReviewForm () {
         
     }
 
+
+    //handleRating will set the value that is input into the object array
     function handleRating(newValue) {
         setValue(newValue);
     }
@@ -63,8 +71,6 @@ export function ReviewForm () {
         {reviews.map((review, index) => {
             return <Reviews key={index} review={review} />
         })}
-
-        {/* <Reviews reviews={reviews}/> */}
 
         </div>
             </div>

@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Rating } from '@mui/material';
 
-  
+  //Reviews component styles the data from the form entry by recieving the props from the parent component, ReviewForm
   export default class Reviews extends React.Component {
 
     constructor(props){

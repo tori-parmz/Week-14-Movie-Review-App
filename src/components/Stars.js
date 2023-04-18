@@ -2,12 +2,12 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
-//stars can be used for both the rating and read-only for the review
 
+//Stars component is a child of ReviewForm and takes the value from onChange event listener
 export default function Stars({rating}) {
   
   const [value, setValue] = React.useState(null);
-  //handleClick = () => {setValue(value)}
+
 
   return (
     <Box

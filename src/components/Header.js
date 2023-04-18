@@ -1,8 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel';
 
+//page header, a rotating carousel
 function Header() {
   return (
-    <Carousel>
+    <Carousel controls={false}>
 
     <Carousel.Item>
             <img

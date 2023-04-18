@@ -3,6 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+//navigation
+
 function Navigation() {
   return (
     <Navbar className='nav' expand="lg" sticky="top">

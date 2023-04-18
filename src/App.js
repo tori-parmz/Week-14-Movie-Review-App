@@ -6,6 +6,7 @@ import MovieList from './components/MovieList';
 import Movie from './components/Movie';
 import Footer from './components/Footer';
 
+//App renders MovieList which is parent of all components besides Header, Footer, & Navigation
 function App() {
   console.log(Movie);
   return (

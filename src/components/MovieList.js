@@ -6,6 +6,10 @@ import React from 'react';
 import Movie from './Movie';
 import { MDBRow } from 'mdb-react-ui-kit';
 
+//MovieList takes the Movie child component and gives the array of objects with props recieved
+//by the child. In the return function, the props from the movie objects are spread into the Movie
+//compoenent through the map array method
+
 function MovieList() {
 
     const movies = [
