@@ -63,7 +63,9 @@ export function ReviewForm () {
         </Form>       
         <br></br>
         <div id="renderedReviews">
-            <Reviews />
+        {reviews.map((review, index) => {
+            return <Reviews key={index} {...review} />
+        })}
 
         </div>
             </div>

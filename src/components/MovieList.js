@@ -4,15 +4,7 @@
 //map doesn't mutate, splice mutates the array, filter doesn't mutate
 import React from 'react';
 import Movie from './Movie';
-import {
-    MDBCard,
-    MDBCardImage,
-    MDBCardBody,
-    MDBCardTitle,
-    MDBCardText,
-    MDBRow,
-    MDBCol
-  } from 'mdb-react-ui-kit';
+import { MDBRow } from 'mdb-react-ui-kit';
 
 function MovieList() {
 

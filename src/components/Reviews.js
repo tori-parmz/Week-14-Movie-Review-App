@@ -20,7 +20,7 @@ import { Rating } from '@mui/material';
 
     render(){
         return (
-            <Box sx={{ minWidth: 275 }}>
+            <Box sx={{ maxWidth: 275 }}>
               <Card variant="outlined">
             <React.Fragment>
             <CardContent>
