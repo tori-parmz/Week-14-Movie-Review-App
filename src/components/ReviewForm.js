@@ -15,9 +15,7 @@ export function ReviewForm () {
         var newReviewObj = {
             userName: newName,
             userReview: newReview,
-            stars: value,//useEffect hook, create a function to pass down from the child stars
-            //parent will create the function and pass it down to the child
-            //child will update the parent's state
+            stars: value,
         };
 
         setReviews([...reviews, newReviewObj]);
@@ -34,7 +32,6 @@ export function ReviewForm () {
 //newReview
     return (
 
-        //have somewhere in state to save the stars, 
         <div>
         <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -64,8 +61,10 @@ export function ReviewForm () {
         <br></br>
         <div id="renderedReviews">
         {reviews.map((review, index) => {
-            return <Reviews key={index} {...review} />
+            return <Reviews key={index} review={review} />
         })}
+
+        {/* <Reviews reviews={reviews}/> */}
 
         </div>
             </div>

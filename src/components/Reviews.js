@@ -10,6 +10,7 @@ import { Rating } from '@mui/material';
 
     constructor(props){
         super(props);
+        console.log(this.props);
       this.state = {
          id: props.id,
          userName: props.userName,
@@ -19,24 +20,25 @@ import { Rating } from '@mui/material';
       }
 
     render(){
+      console.log('Reviews:', this.state);
         return (
             <Box sx={{ maxWidth: 275 }}>
               <Card variant="outlined">
             <React.Fragment>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                Name: {/* {userName} */}
+                Name: {this.props.review.userName}
                 </Typography>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                 Rating:
                 </Typography>
-                <Rating name="read-only" value="5" readOnly />
+                <Rating name="read-only" value={this.props.review.stars} readOnly />
                 <Typography variant="body2">
-                This is a review.
+                {this.props.review.userReview}
                 </Typography>
                 <br></br>
                 <Typography sx={{ fontSize: 12 }} color="text.secondary" gutterBottom>
-                Date
+                {new Date().toLocaleString()}
                 </Typography>
             </CardContent>
             </React.Fragment>
