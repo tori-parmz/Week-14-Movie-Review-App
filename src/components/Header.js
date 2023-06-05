@@ -1,4 +1,17 @@
 import Carousel from 'react-bootstrap/Carousel';
+import SlideOne from "./Assets/movie-still-3.jpeg";
+import SlideTwo from "./Assets/movie-still-5.jpeg";
+import SlideThree from "./Assets/movie-still-9.jpeg";
+import SlideFour from "./Assets/movie-still-1.jpeg";
+import SlideFive from "./Assets/movie-still-6.jpeg";
+import SlideSix from "./Assets/movie-still-4.jpeg";
+import SlideSeven from "./Assets/movie-still-8.jpeg";
+import SlideEight from "./Assets/movie-still-7.jpeg";
+
+
+
+
+
 
 //page header, a rotating carousel
 function Header() {
@@ -8,8 +21,8 @@ function Header() {
     <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./movie-still-3.jpeg"
-              alt="Third slide"
+              src={SlideOne}
+              alt="First Slide"
             />
             <Carousel.Caption>
               
@@ -22,8 +35,8 @@ function Header() {
           <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="./movie-still-5.jpeg"
-          alt="Second slide"
+          src={SlideTwo}
+          alt="Second Slide"
         />
         <Carousel.Caption>
           
@@ -34,8 +47,8 @@ function Header() {
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="./movie-still-9.jpeg"
-          alt="Second slide"
+          src={SlideThree}
+          alt="Third Slide"
         />
         <Carousel.Caption>
           <p>Dune (2021)</p>
@@ -45,8 +58,8 @@ function Header() {
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="./movie-still-1.jpeg"
-          alt="First slide"
+          src={SlideFour}
+          alt="Fourth Slide"
         />
         <Carousel.Caption>
           
@@ -57,8 +70,8 @@ function Header() {
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="./movie-still-6.jpeg"
-          alt="Second slide"
+          src={SlideFive}
+          alt="Fifth Slide"
         />
         <Carousel.Caption>
           
@@ -69,8 +82,8 @@ function Header() {
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="./movie-still-4.jpeg"
-          alt="Second slide"
+          src={SlideSix}
+          alt="Sixth slide"
         />
         <Carousel.Caption>
           
@@ -81,8 +94,8 @@ function Header() {
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="./movie-still-8.jpeg"
-          alt="Second slide"
+          src={SlideSeven}
+          alt="Seventh slide"
         />
         <Carousel.Caption>
           
@@ -92,8 +105,8 @@ function Header() {
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="./movie-still-7.jpeg"
-          alt="Second slide"
+          src={SlideEight}
+          alt="Eighth slide"
         />
         <Carousel.Caption>
           
