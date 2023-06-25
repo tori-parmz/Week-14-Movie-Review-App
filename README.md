@@ -1,6 +1,6 @@
 # :movie_camera: CritHub App :movie_camera:
 ### Promineo Tech Front End Software Development Bootcamp Project
-### :computer: [Demo Site](https://main.d36wjzmwy6fosf.amplifyapp.com/)[1^]
+### :computer: [Demo Site](https://main.d36wjzmwy6fosf.amplifyapp.com/)[^1]
 ### :movie_camera: [Demo Video](https://youtu.be/_2VNm0B31OY)
 
 
@@ -45,4 +45,4 @@ You may also see any lint errors in the console.
 ## :jigsaw: Technologies
 This app was created using React. [Bootstrap](https://getbootstrap.com/) and [React-Bootstrap](https://react-bootstrap.github.io/) were used as syling libraries. The demo of this app was deployed using [AWS Amplify](https://aws.amazon.com/amplify/).
 
-[1^] Note: Unfortunately the header images are not displaying properly in the demo. However, the rest of the app is functional, otherwise.
+[^1] Note: Unfortunately the header images are not displaying properly in the demo. However, the rest of the app is functional, otherwise.
