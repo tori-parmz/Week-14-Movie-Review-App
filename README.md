@@ -1,6 +1,6 @@
 # :movie_camera: CritHub App :movie_camera:
 ### Promineo Tech Front End Software Development Bootcamp Project
-### :computer: [Demo Site](https://main.d36wjzmwy6fosf.amplifyapp.com/) [^1]
+### :computer: [Demo Site](https://main.d36wjzmwy6fosf.amplifyapp.com/)[^1]
 ### :movie_camera: [Demo Video](https://youtu.be/_2VNm0B31OY)
 
 
